@@ -1,0 +1,11 @@
+---
+- hosts: "{{ target }}"
+  tasks:
+  - name: grant sudo command to wheel group
+    lineinfile:
+      state: present
+      dest: /etc/sudoers
+      regexp: '^%wheel'
+      line: '%wheel ALL=(ALL) ALL'
+    become: true
+    become_user: root

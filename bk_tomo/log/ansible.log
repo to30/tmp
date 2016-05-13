@@ -1,0 +1,657 @@
+2016-05-11 19:25:28,707 p=30741 u=tomo |  localhost | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+2016-05-11 19:26:05,806 p=30760 u=tomo |  localhost | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+2016-05-11 19:35:22,214 p=30880 u=tomo |  localhost | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+2016-05-11 19:35:26,027 p=30880 u=tomo |  192.168.0.21 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+2016-05-11 19:35:38,610 p=30908 u=tomo |  192.168.0.21 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh.", 
+    "unreachable": true
+}
+2016-05-11 19:35:38,720 p=30908 u=tomo |  localhost | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+2016-05-11 19:39:10,379 p=30941 u=tomo |  localhost | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+2016-05-11 19:39:22,831 p=30941 u=tomo |  192.168.0.21 | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+2016-05-11 19:40:06,827 p=30973 u=tomo |  192.168.0.21 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh.", 
+    "unreachable": true
+}
+2016-05-11 19:40:06,986 p=30973 u=tomo |  localhost | SUCCESS => {
+    "changed": false, 
+    "ping": "pong"
+}
+2016-05-11 20:14:04,364 p=31201 u=tomo |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/tomo/sample-11-1.yml': line 11, column 14, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    hostname:
+      name: *{{ hostname }}"
+             ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes.  Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2016-05-11 20:14:46,423 p=31207 u=tomo |  [DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and make sure become_method is 'sudo' (default).
+This feature will be 
+removed in a future release. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2016-05-11 20:14:46,664 p=31207 u=tomo |  PLAY [192.168.0.10] ************************************************************
+2016-05-11 20:14:46,665 p=31207 u=tomo |  skipping: no hosts matched
+2016-05-11 20:14:46,665 p=31207 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 20:15:27,052 p=31219 u=tomo |  [DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and make sure become_method is 'sudo' (default).
+This feature will be 
+removed in a future release. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2016-05-11 20:15:27,213 p=31219 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 20:15:27,334 p=31219 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 20:15:45,755 p=31219 u=tomo |  ok: [192.168.0.21]
+2016-05-11 20:15:45,782 p=31219 u=tomo |  TASK [get hostname] ************************************************************
+2016-05-11 20:15:46,435 p=31219 u=tomo |  changed: [192.168.0.21]
+2016-05-11 20:15:46,457 p=31219 u=tomo |  TASK [set hostname] ************************************************************
+2016-05-11 20:15:47,288 p=31219 u=tomo |  changed: [192.168.0.21]
+2016-05-11 20:15:47,293 p=31219 u=tomo |  RUNNING HANDLER [show hostname] ************************************************
+2016-05-11 20:15:47,410 p=31219 u=tomo |  ok: [192.168.0.21] => {
+    "msg": "before=az2-web after=ansible-host1"
+}
+2016-05-11 20:15:47,424 p=31219 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 20:15:47,424 p=31219 u=tomo |  192.168.0.21               : ok=4    changed=2    unreachable=0    failed=0   
+2016-05-11 20:17:47,544 p=31255 u=tomo |  [DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and make sure become_method is 'sudo' (default).
+This feature will be 
+removed in a future release. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2016-05-11 20:17:47,679 p=31255 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 20:17:47,773 p=31255 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 20:17:53,246 p=31255 u=tomo |  ok: [192.168.0.21]
+2016-05-11 20:17:53,261 p=31255 u=tomo |  TASK [get hostname] ************************************************************
+2016-05-11 20:17:53,997 p=31255 u=tomo |  changed: [192.168.0.21]
+2016-05-11 20:17:54,006 p=31255 u=tomo |  TASK [set hostname] ************************************************************
+2016-05-11 20:17:54,923 p=31255 u=tomo |  ok: [192.168.0.21]
+2016-05-11 20:17:54,938 p=31255 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 20:17:54,938 p=31255 u=tomo |  192.168.0.21               : ok=3    changed=1    unreachable=0    failed=0   
+2016-05-11 20:20:15,032 p=31294 u=tomo |  [DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and make sure become_method is 'sudo' (default).
+This feature will be 
+removed in a future release. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2016-05-11 20:20:15,201 p=31294 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 20:20:15,258 p=31294 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 20:20:17,228 p=31294 u=tomo |  ok: [192.168.0.21]
+2016-05-11 20:20:17,244 p=31294 u=tomo |  TASK [get hostname] ************************************************************
+2016-05-11 20:20:17,871 p=31294 u=tomo |  changed: [192.168.0.21]
+2016-05-11 20:20:17,890 p=31294 u=tomo |  TASK [set hostname] ************************************************************
+2016-05-11 20:20:18,591 p=31294 u=tomo |  changed: [192.168.0.21]
+2016-05-11 20:20:18,596 p=31294 u=tomo |  RUNNING HANDLER [show hostname] ************************************************
+2016-05-11 20:20:18,711 p=31294 u=tomo |  ok: [192.168.0.21] => {
+    "msg": "before=ansible-host1 after=az2-web"
+}
+2016-05-11 20:20:18,723 p=31294 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 20:20:18,724 p=31294 u=tomo |  192.168.0.21               : ok=4    changed=2    unreachable=0    failed=0   
+2016-05-11 20:26:06,393 p=31331 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 20:26:06,460 p=31331 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 20:26:20,962 p=31331 u=tomo |  ok: [192.168.0.21]
+2016-05-11 20:26:20,976 p=31331 u=tomo |  TASK [get hostname] ************************************************************
+2016-05-11 20:26:21,564 p=31331 u=tomo |  changed: [192.168.0.21]
+2016-05-11 20:26:21,575 p=31331 u=tomo |  TASK [set hostname] ************************************************************
+2016-05-11 20:26:22,373 p=31331 u=tomo |  ok: [192.168.0.21]
+2016-05-11 20:26:22,386 p=31331 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 20:26:22,386 p=31331 u=tomo |  192.168.0.21               : ok=3    changed=1    unreachable=0    failed=0   
+2016-05-11 20:33:15,571 p=31390 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 20:33:15,690 p=31390 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 20:33:31,619 p=31390 u=tomo |  ok: [192.168.0.21]
+2016-05-11 20:33:31,633 p=31390 u=tomo |  TASK [install or upgrade packages] *********************************************
+2016-05-11 20:34:10,196 p=31390 u=tomo |  skipping: [192.168.0.21] => (item=[u'bash', u'tcsh', u'zsh']) 
+2016-05-11 20:34:10,210 p=31390 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 20:34:10,211 p=31390 u=tomo |  192.168.0.21               : ok=2    changed=1    unreachable=0    failed=0   
+2016-05-11 20:37:51,954 p=31424 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 20:37:52,020 p=31424 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 20:37:53,715 p=31424 u=tomo |  ok: [192.168.0.21]
+2016-05-11 20:37:53,726 p=31424 u=tomo |  TASK [install or upgrade packages] *********************************************
+2016-05-11 20:38:01,189 p=31424 u=tomo |  skipping: [192.168.0.21] => (item=[u'bash', u'tcsh', u'zsh']) 
+2016-05-11 20:38:01,199 p=31424 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 20:38:01,199 p=31424 u=tomo |  192.168.0.21               : ok=2    changed=1    unreachable=0    failed=0   
+2016-05-11 20:43:58,250 p=31474 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 20:43:58,305 p=31474 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 20:44:14,382 p=31474 u=tomo |  ok: [192.168.0.21]
+2016-05-11 20:44:14,390 p=31474 u=tomo |  TASK [install or upgrade packages] *********************************************
+2016-05-11 20:44:28,016 p=31474 u=tomo |  skipping: [192.168.0.21] => (item=[u'bash', u'tcsh', u'zsh']) 
+2016-05-11 20:44:28,031 p=31474 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 20:44:28,031 p=31474 u=tomo |  192.168.0.21               : ok=2    changed=0    unreachable=0    failed=0   
+2016-05-11 20:44:58,300 p=31501 u=tomo |  [DEPRECATION WARNING]: Instead of sudo/sudo_user, use become/become_user and make sure become_method is 'sudo' (default).
+This feature will be 
+removed in a future release. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2016-05-11 20:44:58,437 p=31501 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 20:44:58,493 p=31501 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 20:44:59,887 p=31501 u=tomo |  ok: [192.168.0.21]
+2016-05-11 20:44:59,900 p=31501 u=tomo |  TASK [install or upgrade packages] *********************************************
+2016-05-11 20:45:02,872 p=31501 u=tomo |  skipping: [192.168.0.21] => (item=[u'zsh']) 
+2016-05-11 20:45:02,888 p=31501 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 20:45:02,892 p=31501 u=tomo |  192.168.0.21               : ok=2    changed=0    unreachable=0    failed=0   
+2016-05-11 20:46:55,728 p=31525 u=tomo |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/tomo/sample-11-2.yml': line 10, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    -zsh
+    become: true
+    ^ here
+
+2016-05-11 20:48:26,988 p=31531 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 20:48:27,078 p=31531 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 20:48:29,461 p=31531 u=tomo |  ok: [192.168.0.21]
+2016-05-11 20:48:29,473 p=31531 u=tomo |  TASK [install or upgrade packages] *********************************************
+2016-05-11 20:48:29,538 p=31531 u=tomo |  skipping: [192.168.0.21] => (item=[]) 
+2016-05-11 20:48:29,552 p=31531 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 20:48:29,552 p=31531 u=tomo |  192.168.0.21               : ok=1    changed=0    unreachable=0    failed=0   
+2016-05-11 20:51:51,683 p=31557 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 20:51:51,737 p=31557 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 20:51:53,383 p=31557 u=tomo |  ok: [192.168.0.21]
+2016-05-11 20:51:53,392 p=31557 u=tomo |  TASK [install or upgrade packages] *********************************************
+2016-05-11 20:51:53,438 p=31557 u=tomo |  fatal: [192.168.0.21]: FAILED! => {"failed": true, "msg": "'items' is undefined"}
+2016-05-11 20:51:53,443 p=31557 u=tomo |  NO MORE HOSTS LEFT *************************************************************
+2016-05-11 20:51:53,447 p=31557 u=tomo |  	to retry, use: --limit @sample-11-2.retry
+
+2016-05-11 20:51:53,447 p=31557 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 20:51:53,447 p=31557 u=tomo |  192.168.0.21               : ok=1    changed=0    unreachable=0    failed=1   
+2016-05-11 20:52:57,024 p=31579 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 20:52:57,082 p=31579 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 20:53:10,960 p=31579 u=tomo |  ok: [192.168.0.21]
+2016-05-11 20:53:10,972 p=31579 u=tomo |  TASK [install or upgrade packages] *********************************************
+2016-05-11 20:53:14,214 p=31579 u=tomo |  skipping: [192.168.0.21] => (item=[u'zsh', u'tcsh']) 
+2016-05-11 20:53:14,257 p=31579 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 20:53:14,258 p=31579 u=tomo |  192.168.0.21               : ok=2    changed=0    unreachable=0    failed=0   
+2016-05-11 20:54:34,753 p=31605 u=tomo |  Using /home/tomo/.ansible.cfg as config file
+2016-05-11 20:54:34,904 p=31605 u=tomo |  Loaded callback default of type stdout, v2.0
+2016-05-11 20:54:34,947 p=31605 u=tomo |  PLAYBOOK: sample-11-2.yml ******************************************************
+2016-05-11 20:54:34,949 p=31605 u=tomo |  1 plays in sample-11-2.yml
+2016-05-11 20:54:35,048 p=31605 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 20:54:35,118 p=31605 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 20:54:39,135 p=31605 u=tomo |  ok: [192.168.0.21]
+2016-05-11 20:54:39,143 p=31605 u=tomo |  TASK [install or upgrade packages] *********************************************
+2016-05-11 20:54:39,143 p=31605 u=tomo |  task path: /home/tomo/sample-11-2.yml:4
+2016-05-11 20:54:46,956 p=31605 u=tomo |  skipping: [192.168.0.21] => (item=[u'zsh', u'tcsh'])  => {"changed": false, "invocation": {"module_args": {"conf_file": null, "disable_gpg_check": false, "disablerepo": null, "enablerepo": null, "exclude": null, "install_repoquery": true, "list": null, "name": ["zsh", "tcsh"], "state": "latest", "update_cache": false}, "module_name": "yum"}, "item": ["zsh", "tcsh"], "msg": "", "rc": 0, "results": ["All packages providing zsh are up to date", "All packages providing tcsh are up to date", ""]}
+2016-05-11 20:54:46,968 p=31605 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 20:54:46,968 p=31605 u=tomo |  192.168.0.21               : ok=2    changed=0    unreachable=0    failed=0   
+2016-05-11 20:58:07,769 p=31632 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 20:58:07,851 p=31632 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 20:58:09,603 p=31632 u=tomo |  ok: [192.168.0.21]
+2016-05-11 20:58:09,614 p=31632 u=tomo |  TASK [install or upgrade packages] *********************************************
+2016-05-11 20:58:11,933 p=31632 u=tomo |  skipping: [192.168.0.21] => (item=[u'zsh']) 
+2016-05-11 20:58:11,947 p=31632 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 20:58:11,948 p=31632 u=tomo |  192.168.0.21               : ok=2    changed=0    unreachable=0    failed=0   
+2016-05-11 20:58:25,512 p=31659 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 20:58:25,552 p=31659 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 20:58:27,250 p=31659 u=tomo |  ok: [192.168.0.21]
+2016-05-11 20:58:27,258 p=31659 u=tomo |  TASK [install or upgrade packages] *********************************************
+2016-05-11 20:58:29,579 p=31659 u=tomo |  skipping: [192.168.0.21] => (item=[u'zsh']) 
+2016-05-11 20:58:29,592 p=31659 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 20:58:29,592 p=31659 u=tomo |  192.168.0.21               : ok=2    changed=0    unreachable=0    failed=0   
+2016-05-11 21:01:05,210 p=31698 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 21:01:05,300 p=31698 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 21:01:19,435 p=31698 u=tomo |  ok: [192.168.0.21]
+2016-05-11 21:01:19,445 p=31698 u=tomo |  TASK [install or upgrade packages] *********************************************
+2016-05-11 21:01:22,471 p=31698 u=tomo |  skipping: [192.168.0.21] => (item=[u'bash', u'tcsh', u'zsh']) 
+2016-05-11 21:01:22,483 p=31698 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 21:01:22,484 p=31698 u=tomo |  192.168.0.21               : ok=2    changed=0    unreachable=0    failed=0   
+2016-05-11 21:02:42,309 p=31724 u=tomo |  Using /home/tomo/.ansible.cfg as config file
+2016-05-11 21:02:42,406 p=31724 u=tomo |  PLAYBOOK: sample-11-2.yml ******************************************************
+2016-05-11 21:02:42,407 p=31724 u=tomo |  1 plays in sample-11-2.yml
+2016-05-11 21:02:42,451 p=31724 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 21:02:42,499 p=31724 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 21:02:56,262 p=31724 u=tomo |  ok: [192.168.0.21]
+2016-05-11 21:02:56,273 p=31724 u=tomo |  TASK [install or upgrade packages] *********************************************
+2016-05-11 21:02:56,275 p=31724 u=tomo |  task path: /home/tomo/sample-11-2.yml:4
+2016-05-11 21:02:59,134 p=31724 u=tomo |  skipping: [192.168.0.21] => (item=[u'bash', u'tcsh', u'zsh'])  => {"changed": false, "invocation": {"module_args": {"conf_file": null, "disable_gpg_check": false, "disablerepo": null, "enablerepo": null, "exclude": null, "install_repoquery": true, "list": null, "name": ["bash", "tcsh", "zsh"], "state": "latest", "update_cache": false}, "module_name": "yum"}, "item": ["bash", "tcsh", "zsh"], "msg": "", "rc": 0, "results": ["All packages providing bash are up to date", "All packages providing tcsh are up to date", "All packages providing zsh are up to date", ""]}
+2016-05-11 21:02:59,147 p=31724 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 21:02:59,147 p=31724 u=tomo |  192.168.0.21               : ok=2    changed=0    unreachable=0    failed=0   
+2016-05-11 21:05:03,898 p=31758 u=tomo |  Using /home/tomo/.ansible.cfg as config file
+2016-05-11 21:05:04,012 p=31758 u=tomo |  PLAYBOOK: sample-11-2.yml ******************************************************
+2016-05-11 21:05:04,014 p=31758 u=tomo |  1 plays in sample-11-2.yml
+2016-05-11 21:05:04,077 p=31758 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 21:05:04,166 p=31758 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 21:05:05,893 p=31758 u=tomo |  ok: [192.168.0.21]
+2016-05-11 21:05:05,901 p=31758 u=tomo |  TASK [install or upgrade packages] *********************************************
+2016-05-11 21:05:05,901 p=31758 u=tomo |  task path: /home/tomo/sample-11-2.yml:4
+2016-05-11 21:05:17,811 p=31758 u=tomo |  skipping: [192.168.0.21] => (item=[u'bash', u'tcsh', u'zsh'])  => {"changed": true, "invocation": {"module_args": {"conf_file": null, "disable_gpg_check": false, "disablerepo": null, "enablerepo": null, "exclude": null, "install_repoquery": true, "list": null, "name": ["bash", "tcsh", "zsh"], "state": "latest", "update_cache": false}, "module_name": "yum"}, "item": ["bash", "tcsh", "zsh"], "msg": "", "rc": 0, "results": ["All packages providing bash are up to date", "All packages providing tcsh are up to date", "Loaded plugins: fastestmirror, security\nSetting up Install Process\nLoading mirror speeds from cached hostfile\n * base: ftp.iij.ad.jp\n * epel: ftp.iij.ad.jp\n * extras: ftp.iij.ad.jp\n * updates: ftp.iij.ad.jp\nResolving Dependencies\n--> Running transaction check\n---> Package zsh.x86_64 0:4.3.11-4.el6.centos.2 will be installed\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package     Arch           Version                       Repository       Size\n================================================================================\nInstalling:\n zsh         x86_64         4.3.11-4.el6.centos.2         updates         2.2 M\n\nTransaction Summary\n================================================================================\nInstall       1 Package(s)\n\nTotal download size: 2.2 M\nInstalled size: 5.1 M\nDownloading Packages:\nRunning rpm_check_debug\nRunning Transaction Test\nTransaction Test Succeeded\nRunning Transaction\n\r  Installing : zsh-4.3.11-4.el6.centos.2.x86_64                             1/1 \n\r  Verifying  : zsh-4.3.11-4.el6.centos.2.x86_64                             1/1 \n\nInstalled:\n  zsh.x86_64 0:4.3.11-4.el6.centos.2                                            \n\nComplete!\n"]}
+2016-05-11 21:05:17,828 p=31758 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 21:05:17,830 p=31758 u=tomo |  192.168.0.21               : ok=2    changed=1    unreachable=0    failed=0   
+2016-05-11 21:06:42,328 p=31785 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 21:06:42,400 p=31785 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 21:06:56,511 p=31785 u=tomo |  ok: [192.168.0.21]
+2016-05-11 21:06:56,523 p=31785 u=tomo |  TASK [install or upgrade packages] *********************************************
+2016-05-11 21:07:12,237 p=31785 u=tomo |  skipping: [192.168.0.21] => (item=[u'bash', u'tcsh', u'zsh']) 
+2016-05-11 21:07:12,253 p=31785 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 21:07:12,253 p=31785 u=tomo |  192.168.0.21               : ok=2    changed=1    unreachable=0    failed=0   
+2016-05-11 21:07:19,879 p=31811 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 21:07:19,917 p=31811 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 21:07:21,405 p=31811 u=tomo |  ok: [192.168.0.21]
+2016-05-11 21:07:21,415 p=31811 u=tomo |  TASK [install or upgrade packages] *********************************************
+2016-05-11 21:07:24,037 p=31811 u=tomo |  skipping: [192.168.0.21] => (item=[u'bash', u'tcsh', u'zsh']) 
+2016-05-11 21:07:24,058 p=31811 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 21:07:24,059 p=31811 u=tomo |  192.168.0.21               : ok=2    changed=0    unreachable=0    failed=0   
+2016-05-11 21:09:07,424 p=31836 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 21:09:07,483 p=31836 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 21:09:09,324 p=31836 u=tomo |  ok: [192.168.0.21]
+2016-05-11 21:09:09,333 p=31836 u=tomo |  TASK [install or upgrade packages] *********************************************
+2016-05-11 21:09:18,934 p=31836 u=tomo |  skipping: [192.168.0.21] => (item=[u'bash', u'tcsh', u'zsh']) 
+2016-05-11 21:09:18,956 p=31836 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 21:09:18,960 p=31836 u=tomo |  192.168.0.21               : ok=2    changed=1    unreachable=0    failed=0   
+2016-05-11 21:10:38,742 p=31867 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 21:10:38,833 p=31867 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 21:10:53,017 p=31867 u=tomo |  ok: [192.168.0.21]
+2016-05-11 21:10:53,028 p=31867 u=tomo |  TASK [install or upgrade packages] *********************************************
+2016-05-11 21:11:02,953 p=31867 u=tomo |  skipping: [192.168.0.21] => (item=[u'bash', u'tcsh', u'zsh']) 
+2016-05-11 21:11:02,974 p=31867 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 21:11:02,977 p=31867 u=tomo |  192.168.0.21               : ok=2    changed=1    unreachable=0    failed=0   
+2016-05-11 21:25:15,857 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-11 21:25:15,995 p=31935 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 21:25:16,077 p=31935 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 21:25:32,797 p=31935 u=tomo |  ok: [192.168.0.21]
+2016-05-11 21:25:32,811 p=31935 u=tomo |  TASK [add a new user on target host] *******************************************
+2016-05-11 21:25:33,803 p=31935 u=tomo |  changed: [192.168.0.21]
+2016-05-11 21:25:33,814 p=31935 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 21:25:33,814 p=31935 u=tomo |  192.168.0.21               : ok=2    changed=1    unreachable=0    failed=0   
+2016-05-11 21:30:46,624 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-11 21:30:46,740 p=31976 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 21:30:46,821 p=31976 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 21:31:01,340 p=31976 u=tomo |  ok: [192.168.0.21]
+2016-05-11 21:31:01,365 p=31976 u=tomo |  TASK [add a new user on target host] *******************************************
+2016-05-11 21:31:02,297 p=31976 u=tomo |  changed: [192.168.0.21]
+2016-05-11 21:31:02,311 p=31976 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 21:31:02,312 p=31976 u=tomo |  192.168.0.21               : ok=2    changed=1    unreachable=0    failed=0   
+2016-05-11 21:33:05,992 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-11 21:33:06,114 p=32003 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 21:33:06,163 p=32003 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 21:33:20,678 p=32003 u=tomo |  ok: [192.168.0.21]
+2016-05-11 21:33:20,688 p=32003 u=tomo |  TASK [add a new user on target host] *******************************************
+2016-05-11 21:33:21,453 p=32003 u=tomo |  changed: [192.168.0.21]
+2016-05-11 21:33:21,465 p=32003 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 21:33:21,465 p=32003 u=tomo |  192.168.0.21               : ok=2    changed=1    unreachable=0    failed=0   
+2016-05-11 21:34:20,992 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-11 21:34:21,070 p=32030 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 21:34:21,118 p=32030 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 21:34:21,283 p=32030 u=tomo |  fatal: [192.168.0.21]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh.", "unreachable": true}
+2016-05-11 21:34:21,290 p=32030 u=tomo |  	to retry, use: --limit @sample-11-3.retry
+
+2016-05-11 21:34:21,290 p=32030 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 21:34:21,297 p=32030 u=tomo |  192.168.0.21               : ok=0    changed=0    unreachable=1    failed=0   
+2016-05-11 21:35:34,182 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-11 21:35:34,279 p=32043 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 21:35:34,332 p=32043 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 21:35:36,800 p=32043 u=tomo |  ok: [192.168.0.21]
+2016-05-11 21:35:36,808 p=32043 u=tomo |  TASK [add a new user on target host] *******************************************
+2016-05-11 21:35:37,633 p=32043 u=tomo |  changed: [192.168.0.21]
+2016-05-11 21:35:37,642 p=32043 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 21:35:37,643 p=32043 u=tomo |  192.168.0.21               : ok=2    changed=1    unreachable=0    failed=0   
+2016-05-11 21:39:12,800 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-11 21:39:12,879 p=32085 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 21:39:12,919 p=32085 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 21:39:27,806 p=32085 u=tomo |  ok: [192.168.0.21]
+2016-05-11 21:39:27,827 p=32085 u=tomo |  TASK [add a new user on target host] *******************************************
+2016-05-11 21:39:28,703 p=32085 u=tomo |  changed: [192.168.0.21]
+2016-05-11 21:39:28,713 p=32085 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 21:39:28,713 p=32085 u=tomo |  192.168.0.21               : ok=2    changed=1    unreachable=0    failed=0   
+2016-05-11 21:44:48,372 p=32151 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 21:44:48,449 p=32151 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 21:45:03,102 p=32151 u=tomo |  ok: [192.168.0.21]
+2016-05-11 21:45:03,110 p=32151 u=tomo |  TASK [grant sudo command to wheel group] ***************************************
+2016-05-11 21:45:03,819 p=32151 u=tomo |  changed: [192.168.0.21]
+2016-05-11 21:45:03,831 p=32151 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 21:45:03,831 p=32151 u=tomo |  192.168.0.21               : ok=2    changed=1    unreachable=0    failed=0   
+2016-05-11 21:45:18,904 p=32177 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 21:45:18,961 p=32177 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 21:45:20,396 p=32177 u=tomo |  ok: [192.168.0.21]
+2016-05-11 21:45:20,406 p=32177 u=tomo |  TASK [grant sudo command to wheel group] ***************************************
+2016-05-11 21:45:20,927 p=32177 u=tomo |  changed: [192.168.0.21]
+2016-05-11 21:45:20,937 p=32177 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 21:45:20,937 p=32177 u=tomo |  192.168.0.21               : ok=2    changed=1    unreachable=0    failed=0   
+2016-05-11 21:51:07,783 p=32206 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-11 21:51:07,868 p=32206 u=tomo |  TASK [setup] *******************************************************************
+2016-05-11 21:51:23,257 p=32206 u=tomo |  ok: [192.168.0.21]
+2016-05-11 21:51:23,277 p=32206 u=tomo |  TASK [grant sudo command to wheel group] ***************************************
+2016-05-11 21:51:23,904 p=32206 u=tomo |  changed: [192.168.0.21]
+2016-05-11 21:51:23,910 p=32206 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-11 21:51:23,910 p=32206 u=tomo |  192.168.0.21               : ok=2    changed=1    unreachable=0    failed=0   
+2016-05-12 09:49:17,183 p=519 u=tomo |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/tomo/sample-11-5.yml': line 3, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+- hosts: "{{ target }}"
+    vars:
+    ^ here
+
+2016-05-12 09:51:36,982 p=530 u=tomo |  PLAY [192.168.0.13] ************************************************************
+2016-05-12 09:51:37,252 p=530 u=tomo |  TASK [setup] *******************************************************************
+2016-05-12 09:52:08,086 p=530 u=tomo |  ok: [192.168.0.13]
+2016-05-12 09:52:08,122 p=530 u=tomo |  TASK [replace my.cnf] **********************************************************
+2016-05-12 09:52:08,501 p=530 u=tomo |  fatal: [192.168.0.13]: FAILED! => {"changed": false, "failed": true, "msg": "IOError: [Errno 2] No such file or directory: u'/home/tomo/my.cnf.j2'"}
+2016-05-12 09:52:08,507 p=530 u=tomo |  NO MORE HOSTS LEFT *************************************************************
+2016-05-12 09:52:08,519 p=530 u=tomo |  	to retry, use: --limit @sample-11-5.retry
+
+2016-05-12 09:52:08,519 p=530 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 09:52:08,519 p=530 u=tomo |  192.168.0.13               : ok=1    changed=0    unreachable=0    failed=1   
+2016-05-12 09:53:48,481 p=557 u=tomo |  PLAY [192.168.0.13] ************************************************************
+2016-05-12 09:53:48,567 p=557 u=tomo |  TASK [setup] *******************************************************************
+2016-05-12 09:54:04,361 p=557 u=tomo |  ok: [192.168.0.13]
+2016-05-12 09:54:04,380 p=557 u=tomo |  TASK [replace my.cnf] **********************************************************
+2016-05-12 09:54:06,115 p=557 u=tomo |  changed: [192.168.0.13]
+2016-05-12 09:54:06,125 p=557 u=tomo |  RUNNING HANDLER [restart database] *********************************************
+2016-05-12 09:54:44,200 p=557 u=tomo |  changed: [192.168.0.13]
+2016-05-12 09:54:44,256 p=557 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 09:54:44,257 p=557 u=tomo |  192.168.0.13               : ok=3    changed=2    unreachable=0    failed=0   
+2016-05-12 10:09:50,156 p=620 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-12 10:09:50,454 p=620 u=tomo |  TASK [setup] *******************************************************************
+2016-05-12 10:10:08,741 p=620 u=tomo |  ok: [192.168.0.21]
+2016-05-12 10:10:08,777 p=620 u=tomo |  TASK [reboot server] ***********************************************************
+2016-05-12 10:11:10,552 p=620 u=tomo |  changed: [192.168.0.21]
+2016-05-12 10:11:10,589 p=620 u=tomo |  TASK [wait for shutdown process] ***********************************************
+2016-05-12 10:11:10,740 p=620 u=tomo |  Pausing for 120 seconds
+2016-05-12 10:11:10,751 p=620 u=tomo |  (ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+2016-05-12 10:13:10,817 p=620 u=tomo |  ok: [192.168.0.21 -> localhost]
+2016-05-12 10:13:10,859 p=620 u=tomo |  TASK [check the server to start up] ********************************************
+2016-05-12 10:13:12,682 p=620 u=tomo |  fatal: [192.168.0.21 -> localhost]: FAILED! => {"changed": false, "failed": true, "msg": "unsupported parameter for module: hosts"}
+2016-05-12 10:13:12,695 p=620 u=tomo |  NO MORE HOSTS LEFT *************************************************************
+2016-05-12 10:13:12,703 p=620 u=tomo |  	to retry, use: --limit @sample-11-6.retry
+
+2016-05-12 10:13:12,704 p=620 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 10:13:12,706 p=620 u=tomo |  192.168.0.21               : ok=3    changed=1    unreachable=0    failed=1   
+2016-05-12 11:48:01,560 p=1334 u=tomo |  ERROR! 'creates' is not a valid attribute for a Task
+
+The error appears to have been in '/home/tomo/sample-11-2.yml': line 4, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+  - name: install or upgrade packages
+    ^ here
+
+2016-05-12 11:48:56,683 p=1340 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-12 11:48:56,729 p=1340 u=tomo |  TASK [setup] *******************************************************************
+2016-05-12 11:49:07,213 p=1340 u=tomo |  ok: [192.168.0.21]
+2016-05-12 11:49:07,224 p=1340 u=tomo |  TASK [install or upgrade packages] *********************************************
+2016-05-12 11:50:14,088 p=1340 u=tomo |  skipping: [192.168.0.21] => (item=[u'bash', u'tcsh', u'zsh']) 
+2016-05-12 11:50:14,107 p=1340 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 11:50:14,107 p=1340 u=tomo |  192.168.0.21               : ok=2    changed=0    unreachable=0    failed=0   
+2016-05-12 11:51:06,501 p=1370 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-12 11:51:06,539 p=1370 u=tomo |  TASK [setup] *******************************************************************
+2016-05-12 11:51:08,965 p=1370 u=tomo |  ok: [192.168.0.21]
+2016-05-12 11:51:08,976 p=1370 u=tomo |  TASK [install or upgrade packages] *********************************************
+2016-05-12 11:51:25,556 p=1370 u=tomo |  skipping: [192.168.0.21] => (item=[u'bash', u'tcsh', u'zsh']) 
+2016-05-12 11:51:25,580 p=1370 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 11:51:25,581 p=1370 u=tomo |  192.168.0.21               : ok=2    changed=0    unreachable=0    failed=0   
+2016-05-12 11:57:03,407 p=1393 u=tomo |  [DEPRECATION WARNING]: nova_compute is kept for backwards compatibility but usage is discouraged. The module documentation details page may 
+explain more about this rationale..
+This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2016-05-12 11:57:03,534 p=1393 u=tomo |  PLAY [localhost] ***************************************************************
+2016-05-12 11:57:03,616 p=1393 u=tomo |  TASK [setup] *******************************************************************
+2016-05-12 11:57:06,266 p=1393 u=tomo |  ok: [localhost]
+2016-05-12 11:57:06,285 p=1393 u=tomo |  TASK [ansible_python_interpreter setup] ****************************************
+2016-05-12 11:57:06,471 p=1393 u=tomo |  ok: [localhost]
+2016-05-12 11:57:06,479 p=1393 u=tomo |  TASK [get uuid for generate hostname] ******************************************
+2016-05-12 11:57:06,956 p=1393 u=tomo |  changed: [localhost]
+2016-05-12 11:57:07,035 p=1393 u=tomo |  TASK [create web-server on nova-compute with floating_ip] **********************
+2016-05-12 11:57:20,720 p=1393 u=tomo |  changed: [localhost]
+2016-05-12 11:57:20,841 p=1393 u=tomo |  TASK [create web-server on nova-compute without floating_ip] *******************
+2016-05-12 11:57:21,082 p=1393 u=tomo |  skipping: [localhost]
+2016-05-12 11:57:21,101 p=1393 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 11:57:21,102 p=1393 u=tomo |  localhost                  : ok=4    changed=2    unreachable=0    failed=0   
+2016-05-12 12:58:00,940 p=1543 u=tomo |  [DEPRECATION WARNING]: nova_compute is kept for backwards compatibility but usage is discouraged. The module documentation details page may 
+explain more about this rationale..
+This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2016-05-12 12:58:01,082 p=1543 u=tomo |  PLAY [localhost] ***************************************************************
+2016-05-12 12:58:01,746 p=1543 u=tomo |  TASK [setup] *******************************************************************
+2016-05-12 12:58:06,533 p=1543 u=tomo |  ok: [localhost]
+2016-05-12 12:58:06,572 p=1543 u=tomo |  TASK [ansible_python_interpreter setup] ****************************************
+2016-05-12 12:58:06,845 p=1543 u=tomo |  ok: [localhost]
+2016-05-12 12:58:06,858 p=1543 u=tomo |  TASK [get uuid for generate hostname] ******************************************
+2016-05-12 12:58:07,308 p=1543 u=tomo |  changed: [localhost]
+2016-05-12 12:58:07,384 p=1543 u=tomo |  TASK [create web-server on nova-compute with floating_ip] **********************
+2016-05-12 12:58:20,946 p=1543 u=tomo |  changed: [localhost]
+2016-05-12 12:58:20,970 p=1543 u=tomo |  TASK [create web-server on nova-compute without floating_ip] *******************
+2016-05-12 12:58:21,083 p=1543 u=tomo |  skipping: [localhost]
+2016-05-12 12:58:21,094 p=1543 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 12:58:21,095 p=1543 u=tomo |  localhost                  : ok=4    changed=2    unreachable=0    failed=0   
+2016-05-12 14:48:25,632 p=1693 u=tomo |  [DEPRECATION WARNING]: nova_compute is kept for backwards compatibility but usage is discouraged. The module documentation details page may 
+explain more about this rationale..
+This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2016-05-12 14:48:27,092 p=1693 u=tomo |  PLAY [localhost] ***************************************************************
+2016-05-12 14:48:27,478 p=1693 u=tomo |  TASK [setup] *******************************************************************
+2016-05-12 14:48:32,406 p=1693 u=tomo |  ok: [localhost]
+2016-05-12 14:48:32,441 p=1693 u=tomo |  TASK [ansible_python_interpreter setup] ****************************************
+2016-05-12 14:48:32,713 p=1693 u=tomo |  ok: [localhost]
+2016-05-12 14:48:32,719 p=1693 u=tomo |  TASK [get uuid for generate hostname] ******************************************
+2016-05-12 14:48:33,189 p=1693 u=tomo |  changed: [localhost]
+2016-05-12 14:48:33,277 p=1693 u=tomo |  TASK [create web-server on nova-compute with floating_ip] **********************
+2016-05-12 14:48:46,629 p=1693 u=tomo |  changed: [localhost]
+2016-05-12 14:48:46,656 p=1693 u=tomo |  TASK [create web-server on nova-compute without floating_ip] *******************
+2016-05-12 14:48:46,836 p=1693 u=tomo |  skipping: [localhost]
+2016-05-12 14:48:46,851 p=1693 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 14:48:46,851 p=1693 u=tomo |  localhost                  : ok=4    changed=2    unreachable=0    failed=0   
+2016-05-12 14:53:43,908 p=1774 u=tomo |  [DEPRECATION WARNING]: nova_compute is kept for backwards compatibility but usage is discouraged. The module documentation details page may 
+explain more about this rationale..
+This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2016-05-12 14:53:44,057 p=1774 u=tomo |  PLAY [localhost] ***************************************************************
+2016-05-12 14:53:44,159 p=1774 u=tomo |  TASK [setup] *******************************************************************
+2016-05-12 14:53:46,206 p=1774 u=tomo |  ok: [localhost]
+2016-05-12 14:53:46,219 p=1774 u=tomo |  TASK [ansible_python_interpreter setup] ****************************************
+2016-05-12 14:53:46,428 p=1774 u=tomo |  ok: [localhost]
+2016-05-12 14:53:46,440 p=1774 u=tomo |  TASK [get uuid for generate hostname] ******************************************
+2016-05-12 14:53:46,862 p=1774 u=tomo |  changed: [localhost]
+2016-05-12 14:53:46,949 p=1774 u=tomo |  TASK [create web-server on nova-compute with floating_ip] **********************
+2016-05-12 14:53:59,369 p=1774 u=tomo |  changed: [localhost]
+2016-05-12 14:53:59,402 p=1774 u=tomo |  TASK [create web-server on nova-compute without floating_ip] *******************
+2016-05-12 14:53:59,559 p=1774 u=tomo |  skipping: [localhost]
+2016-05-12 14:53:59,573 p=1774 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 14:53:59,575 p=1774 u=tomo |  localhost                  : ok=4    changed=2    unreachable=0    failed=0   
+2016-05-12 15:02:06,809 p=1858 u=tomo |  [DEPRECATION WARNING]: nova_compute is kept for backwards compatibility but usage is discouraged. The module documentation details page may 
+explain more about this rationale..
+This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2016-05-12 15:02:06,952 p=1858 u=tomo |  PLAY [localhost] ***************************************************************
+2016-05-12 15:02:07,042 p=1858 u=tomo |  TASK [setup] *******************************************************************
+2016-05-12 15:02:10,040 p=1858 u=tomo |  ok: [localhost]
+2016-05-12 15:02:10,056 p=1858 u=tomo |  TASK [ansible_python_interpreter setup] ****************************************
+2016-05-12 15:02:10,257 p=1858 u=tomo |  ok: [localhost]
+2016-05-12 15:02:10,265 p=1858 u=tomo |  TASK [get uuid for generate hostname] ******************************************
+2016-05-12 15:02:10,665 p=1858 u=tomo |  changed: [localhost]
+2016-05-12 15:02:10,738 p=1858 u=tomo |  TASK [create web-server on nova-compute with floating_ip] **********************
+2016-05-12 15:02:21,201 p=1858 u=tomo |  changed: [localhost]
+2016-05-12 15:02:21,221 p=1858 u=tomo |  TASK [create web-server on nova-compute without floating_ip] *******************
+2016-05-12 15:02:21,339 p=1858 u=tomo |  skipping: [localhost]
+2016-05-12 15:02:21,356 p=1858 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 15:02:21,356 p=1858 u=tomo |  localhost                  : ok=4    changed=2    unreachable=0    failed=0   
+2016-05-12 15:04:22,772 p=1927 u=tomo |  [DEPRECATION WARNING]: nova_compute is kept for backwards compatibility but usage is discouraged. The module documentation details page may 
+explain more about this rationale..
+This feature will be removed in a future release. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+2016-05-12 15:04:22,837 p=1927 u=tomo |  PLAY [localhost] ***************************************************************
+2016-05-12 15:04:22,896 p=1927 u=tomo |  TASK [setup] *******************************************************************
+2016-05-12 15:04:24,208 p=1927 u=tomo |  ok: [localhost]
+2016-05-12 15:04:24,220 p=1927 u=tomo |  TASK [ansible_python_interpreter setup] ****************************************
+2016-05-12 15:04:24,432 p=1927 u=tomo |  ok: [localhost]
+2016-05-12 15:04:24,441 p=1927 u=tomo |  TASK [get uuid for generate hostname] ******************************************
+2016-05-12 15:04:24,876 p=1927 u=tomo |  changed: [localhost]
+2016-05-12 15:04:24,942 p=1927 u=tomo |  TASK [create web-server on nova-compute with floating_ip] **********************
+2016-05-12 15:04:35,382 p=1927 u=tomo |  changed: [localhost]
+2016-05-12 15:04:35,401 p=1927 u=tomo |  TASK [create web-server on nova-compute without floating_ip] *******************
+2016-05-12 15:04:35,522 p=1927 u=tomo |  skipping: [localhost]
+2016-05-12 15:04:35,533 p=1927 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 15:04:35,533 p=1927 u=tomo |  localhost                  : ok=4    changed=2    unreachable=0    failed=0   
+2016-05-12 18:10:22,061 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-12 18:10:22,715 p=2148 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-12 18:10:22,922 p=2148 u=tomo |  TASK [setup] *******************************************************************
+2016-05-12 18:10:42,367 p=2148 u=tomo |  ok: [192.168.0.21]
+2016-05-12 18:10:42,381 p=2148 u=tomo |  TASK [add a new user on target host] *******************************************
+2016-05-12 18:10:43,784 p=2148 u=tomo |  changed: [192.168.0.21]
+2016-05-12 18:10:43,805 p=2148 u=tomo |  TASK [add a new user] **********************************************************
+2016-05-12 18:10:44,676 p=2148 u=tomo |  ok: [192.168.0.21]
+2016-05-12 18:10:44,685 p=2148 u=tomo |  TASK [mkdir .ssh] **************************************************************
+2016-05-12 18:10:45,316 p=2148 u=tomo |  changed: [192.168.0.21]
+2016-05-12 18:10:45,331 p=2148 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 18:10:45,332 p=2148 u=tomo |  192.168.0.21               : ok=4    changed=2    unreachable=0    failed=0   
+2016-05-12 19:46:06,780 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-12 19:46:06,906 p=2902 u=tomo |  PLAY [192.168.0.23] ************************************************************
+2016-05-12 19:46:06,907 p=2902 u=tomo |  skipping: no hosts matched
+2016-05-12 19:46:06,907 p=2902 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 19:46:41,010 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-12 19:46:41,118 p=2918 u=tomo |  PLAY [192.168.0.23] ************************************************************
+2016-05-12 19:46:41,118 p=2918 u=tomo |  skipping: no hosts matched
+2016-05-12 19:46:41,119 p=2918 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 19:47:34,303 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-12 19:47:34,378 p=2926 u=tomo |  PLAY [192.168.0.29] ************************************************************
+2016-05-12 19:47:34,378 p=2926 u=tomo |  skipping: no hosts matched
+2016-05-12 19:47:34,378 p=2926 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 19:48:03,871 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-12 19:48:04,008 p=2934 u=tomo |  PLAY [192.168.0.29] ************************************************************
+2016-05-12 19:48:04,062 p=2934 u=tomo |  TASK [setup] *******************************************************************
+2016-05-12 19:48:04,806 p=2934 u=tomo |  fatal: [192.168.0.29]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh.", "unreachable": true}
+2016-05-12 19:48:04,829 p=2934 u=tomo |  	to retry, use: --limit @testkey_mgr.retry
+
+2016-05-12 19:48:04,829 p=2934 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 19:48:04,830 p=2934 u=tomo |  192.168.0.29               : ok=0    changed=0    unreachable=1    failed=0   
+2016-05-12 20:40:49,937 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-12 20:40:50,062 p=3333 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-12 20:40:50,179 p=3333 u=tomo |  TASK [setup] *******************************************************************
+2016-05-12 20:41:07,261 p=3333 u=tomo |  ok: [192.168.0.21]
+2016-05-12 20:41:07,276 p=3333 u=tomo |  TASK [add a new user on target host] *******************************************
+2016-05-12 20:41:08,272 p=3333 u=tomo |  changed: [192.168.0.21]
+2016-05-12 20:41:08,287 p=3333 u=tomo |  TASK [add a new user] **********************************************************
+2016-05-12 20:41:08,988 p=3333 u=tomo |  ok: [192.168.0.21]
+2016-05-12 20:41:09,001 p=3333 u=tomo |  TASK [mkdir .ssh] **************************************************************
+2016-05-12 20:41:09,702 p=3333 u=tomo |  changed: [192.168.0.21]
+2016-05-12 20:41:09,708 p=3333 u=tomo |  TASK [setup authorized_keys] ***************************************************
+2016-05-12 20:41:09,772 p=3333 u=tomo |  fatal: [192.168.0.21]: FAILED! => {"failed": true, "msg": "the file_name '/home/\"testuser\"/.ssh/id_rsa-cert.pub' does not exist, or is not readable"}
+2016-05-12 20:41:09,778 p=3333 u=tomo |  NO MORE HOSTS LEFT *************************************************************
+2016-05-12 20:41:09,784 p=3333 u=tomo |  	to retry, use: --limit @testkey_mgr.retry
+
+2016-05-12 20:41:09,784 p=3333 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 20:41:09,784 p=3333 u=tomo |  192.168.0.21               : ok=4    changed=2    unreachable=0    failed=1   
+2016-05-12 20:42:07,186 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-12 20:42:07,307 p=3376 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-12 20:42:07,358 p=3376 u=tomo |  TASK [setup] *******************************************************************
+2016-05-12 20:42:09,539 p=3376 u=tomo |  ok: [192.168.0.21]
+2016-05-12 20:42:09,546 p=3376 u=tomo |  TASK [add a new user on target host] *******************************************
+2016-05-12 20:42:10,233 p=3376 u=tomo |  changed: [192.168.0.21]
+2016-05-12 20:42:10,241 p=3376 u=tomo |  TASK [add a new user] **********************************************************
+2016-05-12 20:42:10,932 p=3376 u=tomo |  ok: [192.168.0.21]
+2016-05-12 20:42:10,938 p=3376 u=tomo |  TASK [mkdir .ssh] **************************************************************
+2016-05-12 20:42:11,526 p=3376 u=tomo |  ok: [192.168.0.21]
+2016-05-12 20:42:11,536 p=3376 u=tomo |  TASK [setup authorized_keys] ***************************************************
+2016-05-12 20:42:11,594 p=3376 u=tomo |  fatal: [192.168.0.21]: FAILED! => {"failed": true, "msg": "the file_name '/home/\"testuser\"/.ssh/id_rsa-cert.pub' does not exist, or is not readable"}
+2016-05-12 20:42:11,601 p=3376 u=tomo |  NO MORE HOSTS LEFT *************************************************************
+2016-05-12 20:42:11,610 p=3376 u=tomo |  	to retry, use: --limit @testkey_mgr.retry
+
+2016-05-12 20:42:11,610 p=3376 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 20:42:11,611 p=3376 u=tomo |  192.168.0.21               : ok=4    changed=1    unreachable=0    failed=1   
+2016-05-12 20:42:58,156 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-12 20:42:58,218 p=3416 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-12 20:42:58,253 p=3416 u=tomo |  TASK [setup] *******************************************************************
+2016-05-12 20:43:00,074 p=3416 u=tomo |  ok: [192.168.0.21]
+2016-05-12 20:43:00,084 p=3416 u=tomo |  TASK [add a new user on target host] *******************************************
+2016-05-12 20:43:00,787 p=3416 u=tomo |  changed: [192.168.0.21]
+2016-05-12 20:43:00,796 p=3416 u=tomo |  TASK [add a new user] **********************************************************
+2016-05-12 20:43:01,373 p=3416 u=tomo |  ok: [192.168.0.21]
+2016-05-12 20:43:01,383 p=3416 u=tomo |  TASK [mkdir .ssh] **************************************************************
+2016-05-12 20:43:01,944 p=3416 u=tomo |  ok: [192.168.0.21]
+2016-05-12 20:43:01,953 p=3416 u=tomo |  TASK [setup authorized_keys] ***************************************************
+2016-05-12 20:43:02,003 p=3416 u=tomo |  fatal: [192.168.0.21]: FAILED! => {"failed": true, "msg": "the file_name '/home/testuser/.ssh/id_rsa-cert.pub' does not exist, or is not readable"}
+2016-05-12 20:43:02,011 p=3416 u=tomo |  NO MORE HOSTS LEFT *************************************************************
+2016-05-12 20:43:02,015 p=3416 u=tomo |  	to retry, use: --limit @testkey_mgr.retry
+
+2016-05-12 20:43:02,020 p=3416 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 20:43:02,022 p=3416 u=tomo |  192.168.0.21               : ok=4    changed=1    unreachable=0    failed=1   
+2016-05-12 20:44:55,047 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-12 20:44:55,200 p=3459 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-12 20:44:55,244 p=3459 u=tomo |  TASK [setup] *******************************************************************
+2016-05-12 20:44:57,078 p=3459 u=tomo |  ok: [192.168.0.21]
+2016-05-12 20:44:57,091 p=3459 u=tomo |  TASK [add a new user on target host] *******************************************
+2016-05-12 20:44:57,923 p=3459 u=tomo |  changed: [192.168.0.21]
+2016-05-12 20:44:57,934 p=3459 u=tomo |  TASK [add a new user] **********************************************************
+2016-05-12 20:44:58,645 p=3459 u=tomo |  ok: [192.168.0.21]
+2016-05-12 20:44:58,657 p=3459 u=tomo |  TASK [mkdir .ssh] **************************************************************
+2016-05-12 20:44:59,279 p=3459 u=tomo |  ok: [192.168.0.21]
+2016-05-12 20:44:59,286 p=3459 u=tomo |  TASK [setup authorized_keys] ***************************************************
+2016-05-12 20:44:59,350 p=3459 u=tomo |  fatal: [192.168.0.21]: FAILED! => {"failed": true, "msg": "the file_name '/home/testuser/.ssh/id_rsa-cert.pub' does not exist, or is not readable"}
+2016-05-12 20:44:59,353 p=3459 u=tomo |  NO MORE HOSTS LEFT *************************************************************
+2016-05-12 20:44:59,364 p=3459 u=tomo |  	to retry, use: --limit @testkey_mgr.retry
+
+2016-05-12 20:44:59,365 p=3459 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 20:44:59,365 p=3459 u=tomo |  192.168.0.21               : ok=4    changed=1    unreachable=0    failed=1   
+2016-05-12 20:52:43,960 p=3638 u=tomo |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/tomo/testkey_mgr.yml': line 32, column 19, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    become: true
+    become_user: {{ username }}
+                  ^ here
+We could be wrong, but this one looks like it might be an issue with
+missing quotes.  Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2016-05-12 20:53:19,705 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-12 20:53:19,888 p=3644 u=tomo |  PLAY [192.168.0.21] ************************************************************
+2016-05-12 20:53:19,978 p=3644 u=tomo |  TASK [setup] *******************************************************************
+2016-05-12 20:53:34,323 p=3644 u=tomo |  ok: [192.168.0.21]
+2016-05-12 20:53:34,342 p=3644 u=tomo |  TASK [add a new user on target host] *******************************************
+2016-05-12 20:53:35,110 p=3644 u=tomo |  changed: [192.168.0.21]
+2016-05-12 20:53:35,125 p=3644 u=tomo |  TASK [add a new user] **********************************************************
+2016-05-12 20:53:35,871 p=3644 u=tomo |  ok: [192.168.0.21]
+2016-05-12 20:53:35,882 p=3644 u=tomo |  TASK [mkdir .ssh] **************************************************************
+2016-05-12 20:53:36,538 p=3644 u=tomo |  ok: [192.168.0.21]
+2016-05-12 20:53:36,551 p=3644 u=tomo |  TASK [setup authorized_keys] ***************************************************
+2016-05-12 20:53:36,623 p=3644 u=tomo |  fatal: [192.168.0.21]: FAILED! => {"failed": true, "msg": "the file_name '/home/testuser/.ssh/id_rsa-cert.pub' does not exist, or is not readable"}
+2016-05-12 20:53:36,626 p=3644 u=tomo |  NO MORE HOSTS LEFT *************************************************************
+2016-05-12 20:53:36,632 p=3644 u=tomo |  	to retry, use: --limit @testkey_mgr.retry
+
+2016-05-12 20:53:36,632 p=3644 u=tomo |  PLAY RECAP *********************************************************************
+2016-05-12 20:53:36,633 p=3644 u=tomo |  192.168.0.21               : ok=4    changed=1    unreachable=0    failed=1   

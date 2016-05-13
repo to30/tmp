@@ -1,0 +1,29 @@
+---
+- hosts: localhost
+  vars:
+    username: hoge
+    password: KeepItSimp!e
+  vars_prompt:
+  - name: "password"
+    prompt: "Enter a new user's password"
+    private: yes
+    encrypt: "md5_crypt"
+    confirm: yes
+    salt_size: 7
+  tasks:
+  - name: add a new user on target host
+    user:
+      name: "{{ username }}"
+      password: "{{ password }}"
+      group: wheel
+    become: true
+    become_user: root
+  - name: add a new user
+    user: name="{{ username }}" state=present
+    become: true
+    become_user: root
+  - name: make rsa key
+    shell: ssh-keygen -t rsa -b 2048 -N "{{ password }}" -f /home/{{ username }}/.ssh/id_rsa
+    become: true
+    become_user: "{{ username }}"
+

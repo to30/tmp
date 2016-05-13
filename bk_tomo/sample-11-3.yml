@@ -1,0 +1,19 @@
+---
+- hosts: "{{ target }}"
+  vars:
+    username: aaa
+  vars_prompt:
+  - name: "password"
+    prompt: "Enter a new user's password"
+    private: yes
+    encrypt: "md5_crypt"
+    confirm: yes
+    salt_size: 7
+  tasks:
+  - name: add a new user on target host
+    user:
+      name: "{{ username }}"
+      password: "{{ password }}"
+      group: wheel
+    become: true
+    become_user: root

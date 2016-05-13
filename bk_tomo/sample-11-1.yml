@@ -1,0 +1,19 @@
+---
+- hosts: "{{ target }}"
+  vars:
+    hostname: az2-web
+  tasks:
+  - name: get hostname
+    shell: hostname
+    register: result
+  - name: set hostname
+    hostname:
+      name: "{{ hostname }}"
+    become: yes
+    become_user: root
+    notify: show hostname
+  handlers:
+  - name: show hostname
+    debug:
+      msg: "before={{ result.stdout }} after={{ hostname }}"
+

@@ -1,0 +1,17 @@
+. /home/tomo/venv/venv27/bin/activate
+
+export OS_AUTH_URL=http://192.168.100.10:5000/v2.0/
+export OS_REGION_NAME=RegionOne
+export OS_TENANT_NAME=SNSApp
+export OS_USERNAME=snsapp-infra-user
+export OS_PASSWORD=passw0rd
+
+function get_uuid () { cat - | grep " id " | awk '{print $4}'; }
+
+export OS_DMZ_NET=`neutron net-show dmz-net | get_uuid`
+export OS_APP_NET=`neutron net-show app-net | get_uuid`
+export OS_DBS_NET=`neutron net-show dbs-net | get_uuid`
+
+
+
+

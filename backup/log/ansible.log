@@ -1,0 +1,133 @@
+2016-05-12 21:05:04,832 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-12 21:05:05,191 p=4717 u=root |  PLAY [192.168.0.21] ************************************************************
+2016-05-12 21:05:05,230 p=4717 u=root |  TASK [setup] *******************************************************************
+2016-05-12 21:05:09,068 p=4717 u=root |  ok: [192.168.0.21]
+2016-05-12 21:05:09,087 p=4717 u=root |  TASK [add a new user on target host] *******************************************
+2016-05-12 21:05:10,004 p=4717 u=root |  changed: [192.168.0.21]
+2016-05-12 21:05:10,028 p=4717 u=root |  TASK [add a new user] **********************************************************
+2016-05-12 21:05:10,731 p=4717 u=root |  ok: [192.168.0.21]
+2016-05-12 21:05:10,744 p=4717 u=root |  TASK [mkdir .ssh] **************************************************************
+2016-05-12 21:05:11,311 p=4717 u=root |  ok: [192.168.0.21]
+2016-05-12 21:05:11,324 p=4717 u=root |  TASK [setup authorized_keys] ***************************************************
+2016-05-12 21:05:12,493 p=4717 u=root |  fatal: [192.168.0.21]: FAILED! => {"changed": false, "failed": true, "msg": "invalid key specified: ssh-rsa-cert-v01@openssh.com AAAAHHNzaC1yc2EtY2VydC12MDFAb3BlbnNzaC5jb20AAAAga6kMe2AOiuYMWc4772QJjEfVObAZq8CNqAhyFHSdiB4AAAABIwAAAQEAv0fRQPdesgTUwyPY/P+GULl5bFGjJ9f8FrRufJFlimqwf56/6oP9l4n4N13JLf73/y4hN/t8U87bxFRAnW/OxJ1AGEiBe8veK4QgTTG55paTXSZNDpkTSaI571Y73CWgKBpZmgggANYSkbz2ndf7JppbSDpnKcuyplvp1siOt1o+/bxl+YMQTDloiicloHRkIRiKhWYK7kneyL+ut8sSqaPXJ23eZqoZhhxTusHgBNdWpCaK9VZ8P91BZzSu+qXAa8+7Ij7phFjyxB0olqGNV1xOG5a+jXdlcWzBcHZihgweKKvtpT4MZE1clv2pOZIXpknlxsrx9O6DMbPV0LetxQAAAAAAAAAAAAAAAQAAABB0ZXN0LWNlcnRpZmljYXRlAAAAAAAAAABXNGOYAAAAAFc5qgEAAAAAAAAAggAAABVwZXJtaXQtWDExLWZvcndhcmRpbmcAAAAAAAAAF3Blcm1pdC1hZ2VudC1mb3J3YXJkaW5nAAAAAAAAABZwZXJtaXQtcG9ydC1mb3J3YXJkaW5nAAAAAAAAAApwZXJtaXQtcHR5AAAAAAAAAA5wZXJtaXQtdXNlci1yYwAAAAAAAAAAAAABFQAAAAdzc2gtcnNhAAAAASMAAAEBAL9H0UD3XrIE1MMj2Pz/hlC5eWxRoyfX/Ba0bnyRZYpqsH+ev+qD/ZeJ+DddyS3+9/8uITf7fFPO28RUQJ1vzsSdQBhIgXvL3iuEIE0xueaWk10mTQ6ZE0miOe9WO9wloCgaWZoIIADWEpG89p3X+yaaW0g6ZynLsqZb6dbIjrdaPv28ZfmDEEw5aIonJaB0ZCEYioVmCu5J3si/rrfLEqmj1ydt3maqGYYcU7rB4ATXVqQmivVWfD/dQWc0rvqlwGvPuyI+6YRY8sQdKJahjVdcThuWvo13ZXFswXB2YoYMHiir7aU+DGRNXJb9qTmSF6ZJ5cbK8fTugzGz1dC3rcUAAAEPAAAAB3NzaC1yc2EAAAEAB8fTjiLEl20HnLmvpyGfNino5kucEMPvIvOWSl2Uf31FqYQ+kv4Io71OZ3liXXwGgbhm//8yMy23xyoWdenILquKnePi3bKo8bL1IburAOdUcZS88AodmO1LmUSwK2awJGJ5Czvn6rFe1oKSubMIWUx7vBbgc7semGsgThq2GDe2lKgwrRI3FxP01l7636Ezxh4mJ8nawgc7AJ3RnPRjy1Egn36LJl6zJr59Zk8p9yV+j1MUbyG//xqudPoTSncEV55qQ/vVQoV25cJC6NnakWu2N5glyv++2KkZY+qvzSvJvoCmdNq5k0t5uFrDQfPD7U5xgFxWAhNouCgW+FaOoA== id_rsa.pub"}
+2016-05-12 21:05:12,502 p=4717 u=root |  NO MORE HOSTS LEFT *************************************************************
+2016-05-12 21:05:12,509 p=4717 u=root |  	to retry, use: --limit @testkey_mgr.retry
+
+2016-05-12 21:05:12,509 p=4717 u=root |  PLAY RECAP *********************************************************************
+2016-05-12 21:05:12,510 p=4717 u=root |  192.168.0.21               : ok=4    changed=1    unreachable=0    failed=1   
+2016-05-12 21:06:42,660 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-12 21:06:42,769 p=4766 u=root |  PLAY [192.168.0.21] ************************************************************
+2016-05-12 21:06:42,823 p=4766 u=root |  TASK [setup] *******************************************************************
+2016-05-12 21:07:02,438 p=4766 u=root |  ok: [192.168.0.21]
+2016-05-12 21:07:02,450 p=4766 u=root |  TASK [add a new user on target host] *******************************************
+2016-05-12 21:07:03,221 p=4766 u=root |  changed: [192.168.0.21]
+2016-05-12 21:07:03,227 p=4766 u=root |  TASK [add a new user] **********************************************************
+2016-05-12 21:07:03,881 p=4766 u=root |  ok: [192.168.0.21]
+2016-05-12 21:07:03,890 p=4766 u=root |  TASK [mkdir .ssh] **************************************************************
+2016-05-12 21:07:04,543 p=4766 u=root |  ok: [192.168.0.21]
+2016-05-12 21:07:04,554 p=4766 u=root |  TASK [setup authorized_keys] ***************************************************
+2016-05-12 21:07:05,531 p=4766 u=root |  fatal: [192.168.0.21]: FAILED! => {"changed": false, "failed": true, "msg": "invalid key specified: ssh-rsa-cert-v01@openssh.com AAAAHHNzaC1yc2EtY2VydC12MDFAb3BlbnNzaC5jb20AAAAga6kMe2AOiuYMWc4772QJjEfVObAZq8CNqAhyFHSdiB4AAAABIwAAAQEAv0fRQPdesgTUwyPY/P+GULl5bFGjJ9f8FrRufJFlimqwf56/6oP9l4n4N13JLf73/y4hN/t8U87bxFRAnW/OxJ1AGEiBe8veK4QgTTG55paTXSZNDpkTSaI571Y73CWgKBpZmgggANYSkbz2ndf7JppbSDpnKcuyplvp1siOt1o+/bxl+YMQTDloiicloHRkIRiKhWYK7kneyL+ut8sSqaPXJ23eZqoZhhxTusHgBNdWpCaK9VZ8P91BZzSu+qXAa8+7Ij7phFjyxB0olqGNV1xOG5a+jXdlcWzBcHZihgweKKvtpT4MZE1clv2pOZIXpknlxsrx9O6DMbPV0LetxQAAAAAAAAAAAAAAAQAAABB0ZXN0LWNlcnRpZmljYXRlAAAAAAAAAABXNGOYAAAAAFc5qgEAAAAAAAAAggAAABVwZXJtaXQtWDExLWZvcndhcmRpbmcAAAAAAAAAF3Blcm1pdC1hZ2VudC1mb3J3YXJkaW5nAAAAAAAAABZwZXJtaXQtcG9ydC1mb3J3YXJkaW5nAAAAAAAAAApwZXJtaXQtcHR5AAAAAAAAAA5wZXJtaXQtdXNlci1yYwAAAAAAAAAAAAABFQAAAAdzc2gtcnNhAAAAASMAAAEBAL9H0UD3XrIE1MMj2Pz/hlC5eWxRoyfX/Ba0bnyRZYpqsH+ev+qD/ZeJ+DddyS3+9/8uITf7fFPO28RUQJ1vzsSdQBhIgXvL3iuEIE0xueaWk10mTQ6ZE0miOe9WO9wloCgaWZoIIADWEpG89p3X+yaaW0g6ZynLsqZb6dbIjrdaPv28ZfmDEEw5aIonJaB0ZCEYioVmCu5J3si/rrfLEqmj1ydt3maqGYYcU7rB4ATXVqQmivVWfD/dQWc0rvqlwGvPuyI+6YRY8sQdKJahjVdcThuWvo13ZXFswXB2YoYMHiir7aU+DGRNXJb9qTmSF6ZJ5cbK8fTugzGz1dC3rcUAAAEPAAAAB3NzaC1yc2EAAAEAB8fTjiLEl20HnLmvpyGfNino5kucEMPvIvOWSl2Uf31FqYQ+kv4Io71OZ3liXXwGgbhm//8yMy23xyoWdenILquKnePi3bKo8bL1IburAOdUcZS88AodmO1LmUSwK2awJGJ5Czvn6rFe1oKSubMIWUx7vBbgc7semGsgThq2GDe2lKgwrRI3FxP01l7636Ezxh4mJ8nawgc7AJ3RnPRjy1Egn36LJl6zJr59Zk8p9yV+j1MUbyG//xqudPoTSncEV55qQ/vVQoV25cJC6NnakWu2N5glyv++2KkZY+qvzSvJvoCmdNq5k0t5uFrDQfPD7U5xgFxWAhNouCgW+FaOoA== id_rsa.pub"}
+2016-05-12 21:07:05,538 p=4766 u=root |  NO MORE HOSTS LEFT *************************************************************
+2016-05-12 21:07:05,543 p=4766 u=root |  	to retry, use: --limit @testkey_mgr.retry
+
+2016-05-12 21:07:05,544 p=4766 u=root |  PLAY RECAP *********************************************************************
+2016-05-12 21:07:05,544 p=4766 u=root |  192.168.0.21               : ok=4    changed=1    unreachable=0    failed=1   
+2016-05-12 21:20:36,887 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-12 21:20:37,002 p=4911 u=root |  PLAY [192.168.0.21] ************************************************************
+2016-05-12 21:20:37,087 p=4911 u=root |  TASK [setup] *******************************************************************
+2016-05-12 21:20:57,132 p=4911 u=root |  ok: [192.168.0.21]
+2016-05-12 21:20:57,147 p=4911 u=root |  TASK [add a new user on target host] *******************************************
+2016-05-12 21:20:57,885 p=4911 u=root |  changed: [192.168.0.21]
+2016-05-12 21:20:57,893 p=4911 u=root |  TASK [add a new user] **********************************************************
+2016-05-12 21:20:58,606 p=4911 u=root |  ok: [192.168.0.21]
+2016-05-12 21:20:58,617 p=4911 u=root |  TASK [mkdir .ssh] **************************************************************
+2016-05-12 21:20:59,200 p=4911 u=root |  ok: [192.168.0.21]
+2016-05-12 21:20:59,207 p=4911 u=root |  TASK [setup authorized_keys] ***************************************************
+2016-05-12 21:21:00,077 p=4911 u=root |  fatal: [192.168.0.21]: FAILED! => {"changed": false, "failed": true, "msg": "invalid key specified: ssh-rsa-cert-v01@openssh.com AAAAHHNzaC1yc2EtY2VydC12MDFAb3BlbnNzaC5jb20AAAAga6kMe2AOiuYMWc4772QJjEfVObAZq8CNqAhyFHSdiB4AAAABIwAAAQEAv0fRQPdesgTUwyPY/P+GULl5bFGjJ9f8FrRufJFlimqwf56/6oP9l4n4N13JLf73/y4hN/t8U87bxFRAnW/OxJ1AGEiBe8veK4QgTTG55paTXSZNDpkTSaI571Y73CWgKBpZmgggANYSkbz2ndf7JppbSDpnKcuyplvp1siOt1o+/bxl+YMQTDloiicloHRkIRiKhWYK7kneyL+ut8sSqaPXJ23eZqoZhhxTusHgBNdWpCaK9VZ8P91BZzSu+qXAa8+7Ij7phFjyxB0olqGNV1xOG5a+jXdlcWzBcHZihgweKKvtpT4MZE1clv2pOZIXpknlxsrx9O6DMbPV0LetxQAAAAAAAAAAAAAAAQAAABB0ZXN0LWNlcnRpZmljYXRlAAAAAAAAAABXNGOYAAAAAFc5qgEAAAAAAAAAggAAABVwZXJtaXQtWDExLWZvcndhcmRpbmcAAAAAAAAAF3Blcm1pdC1hZ2VudC1mb3J3YXJkaW5nAAAAAAAAABZwZXJtaXQtcG9ydC1mb3J3YXJkaW5nAAAAAAAAAApwZXJtaXQtcHR5AAAAAAAAAA5wZXJtaXQtdXNlci1yYwAAAAAAAAAAAAABFQAAAAdzc2gtcnNhAAAAASMAAAEBAL9H0UD3XrIE1MMj2Pz/hlC5eWxRoyfX/Ba0bnyRZYpqsH+ev+qD/ZeJ+DddyS3+9/8uITf7fFPO28RUQJ1vzsSdQBhIgXvL3iuEIE0xueaWk10mTQ6ZE0miOe9WO9wloCgaWZoIIADWEpG89p3X+yaaW0g6ZynLsqZb6dbIjrdaPv28ZfmDEEw5aIonJaB0ZCEYioVmCu5J3si/rrfLEqmj1ydt3maqGYYcU7rB4ATXVqQmivVWfD/dQWc0rvqlwGvPuyI+6YRY8sQdKJahjVdcThuWvo13ZXFswXB2YoYMHiir7aU+DGRNXJb9qTmSF6ZJ5cbK8fTugzGz1dC3rcUAAAEPAAAAB3NzaC1yc2EAAAEAB8fTjiLEl20HnLmvpyGfNino5kucEMPvIvOWSl2Uf31FqYQ+kv4Io71OZ3liXXwGgbhm//8yMy23xyoWdenILquKnePi3bKo8bL1IburAOdUcZS88AodmO1LmUSwK2awJGJ5Czvn6rFe1oKSubMIWUx7vBbgc7semGsgThq2GDe2lKgwrRI3FxP01l7636Ezxh4mJ8nawgc7AJ3RnPRjy1Egn36LJl6zJr59Zk8p9yV+j1MUbyG//xqudPoTSncEV55qQ/vVQoV25cJC6NnakWu2N5glyv++2KkZY+qvzSvJvoCmdNq5k0t5uFrDQfPD7U5xgFxWAhNouCgW+FaOoA== id_rsa.pub"}
+2016-05-12 21:21:00,084 p=4911 u=root |  NO MORE HOSTS LEFT *************************************************************
+2016-05-12 21:21:00,091 p=4911 u=root |  	to retry, use: --limit @testkey_mgr.retry
+
+2016-05-12 21:21:00,091 p=4911 u=root |  PLAY RECAP *********************************************************************
+2016-05-12 21:21:00,091 p=4911 u=root |  192.168.0.21               : ok=4    changed=1    unreachable=0    failed=1   
+2016-05-12 21:24:21,031 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-12 21:24:21,136 p=4961 u=root |  PLAY [192.168.0.21] ************************************************************
+2016-05-12 21:24:21,199 p=4961 u=root |  TASK [setup] *******************************************************************
+2016-05-12 21:24:40,175 p=4961 u=root |  ok: [192.168.0.21]
+2016-05-12 21:24:40,189 p=4961 u=root |  TASK [add a new user on target host] *******************************************
+2016-05-12 21:24:40,983 p=4961 u=root |  changed: [192.168.0.21]
+2016-05-12 21:24:40,991 p=4961 u=root |  TASK [add a new user] **********************************************************
+2016-05-12 21:24:41,693 p=4961 u=root |  ok: [192.168.0.21]
+2016-05-12 21:24:41,717 p=4961 u=root |  TASK [mkdir .ssh] **************************************************************
+2016-05-12 21:24:42,317 p=4961 u=root |  ok: [192.168.0.21]
+2016-05-12 21:24:42,327 p=4961 u=root |  TASK [setup authorized_keys] ***************************************************
+2016-05-12 21:24:43,391 p=4961 u=root |  changed: [192.168.0.21]
+2016-05-12 21:24:43,401 p=4961 u=root |  PLAY RECAP *********************************************************************
+2016-05-12 21:24:43,402 p=4961 u=root |  192.168.0.21               : ok=5    changed=2    unreachable=0    failed=0   
+2016-05-12 21:28:21,141 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-12 21:28:21,250 p=5038 u=root |  PLAY [192.168.0.21] ************************************************************
+2016-05-12 21:28:21,312 p=5038 u=root |  TASK [setup] *******************************************************************
+2016-05-12 21:28:35,387 p=5038 u=root |  ok: [192.168.0.21]
+2016-05-12 21:28:35,403 p=5038 u=root |  TASK [add a new user on target host] *******************************************
+2016-05-12 21:28:36,189 p=5038 u=root |  changed: [192.168.0.21]
+2016-05-12 21:28:36,199 p=5038 u=root |  TASK [add a new user] **********************************************************
+2016-05-12 21:28:36,814 p=5038 u=root |  ok: [192.168.0.21]
+2016-05-12 21:28:36,824 p=5038 u=root |  TASK [mkdir .ssh] **************************************************************
+2016-05-12 21:28:37,403 p=5038 u=root |  ok: [192.168.0.21]
+2016-05-12 21:28:37,411 p=5038 u=root |  TASK [setup authorized_keys] ***************************************************
+2016-05-12 21:28:38,254 p=5038 u=root |  ok: [192.168.0.21]
+2016-05-12 21:28:38,264 p=5038 u=root |  PLAY RECAP *********************************************************************
+2016-05-12 21:28:38,264 p=5038 u=root |  192.168.0.21               : ok=5    changed=1    unreachable=0    failed=0   
+2016-05-13 08:41:27,995 p=5897 u=root |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/root/local_testkey_mgr.yml': line 24, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    become_user: root
+  - name: make a rsa key
+    ^ here
+
+
+The error appears to have been in '/root/local_testkey_mgr.yml': line 24, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    become_user: root
+  - name: make a rsa key
+    ^ here
+
+2016-05-13 08:46:53,949 p=5929 u=root |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/root/local_testkey_mgr.yml': line 24, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    become_user: root
+  - name: make rsa key
+    ^ here
+
+
+The error appears to have been in '/root/local_testkey_mgr.yml': line 24, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    become_user: root
+  - name: make rsa key
+    ^ here
+
+2016-05-13 08:52:37,807 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2016-05-13 08:52:38,034 p=5940 u=root |  PLAY [localhost] ***************************************************************
+2016-05-13 08:52:38,289 p=5940 u=root |  TASK [setup] *******************************************************************
+2016-05-13 08:52:45,893 p=5940 u=root |  ok: [localhost]
+2016-05-13 08:52:45,910 p=5940 u=root |  TASK [add a new user on target host] *******************************************
+2016-05-13 08:52:48,838 p=5940 u=root |  changed: [localhost]
+2016-05-13 08:52:48,859 p=5940 u=root |  TASK [add a new user] **********************************************************
+2016-05-13 08:52:49,576 p=5940 u=root |  ok: [localhost]
+2016-05-13 08:52:49,586 p=5940 u=root |  TASK [make rsa key] ************************************************************
+2016-05-13 08:52:50,496 p=5940 u=root |  changed: [localhost]
+2016-05-13 08:52:50,509 p=5940 u=root |  PLAY RECAP *********************************************************************
+2016-05-13 08:52:50,509 p=5940 u=root |  localhost                  : ok=4    changed=2    unreachable=0    failed=0   
